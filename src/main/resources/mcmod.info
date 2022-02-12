@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tfctowerheat",
+  "name": "TFC TowerHeat",
+  "description": "Shows the ore temperatures while in the Blast Furnace Gui.",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BananaFructa"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
