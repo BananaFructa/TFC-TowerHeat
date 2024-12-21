@@ -30,7 +30,7 @@ public class TowerHeat {
 
     public static final String modId = "tfctowerheat";
     public static final String name = "TFC TowerHeat";
-    public static final String version = "1.2";
+    public static final String version = "1.3";
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -90,13 +90,16 @@ public class TowerHeat {
 
             if (tempList.size() != 0) {
 
-                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 82,sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 81 + 11 * ((tempList.size())/4),0x77000000);
+                int rectSize = tempList.size()/4;
+                if (tempList.size() % 4 != 0) rectSize += 1;
+
+                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 82,sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 81 + 11 * (rectSize),0x77000000);
 
                 Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 81,sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 82,0xff000000);
-                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 81 + 11 * ((tempList.size())/4),sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 82 + 11 * ((tempList.size())/4),0xff000000);
+                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 81 + 11 * (rectSize),sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 82 + 11 * (rectSize),0xff000000);
 
-                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 81,sr.getScaledWidth() / 2 - 207,sr.getScaledHeight()/2 - 82 + 11 * ((tempList.size())/4),0xff000000);
-                Gui.drawRect(sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 81 ,sr.getScaledWidth() / 2 - 90,sr.getScaledHeight()/2 - 82 + 11 * ((tempList.size())/4),0xff000000);
+                Gui.drawRect(sr.getScaledWidth() / 2 - 206,sr.getScaledHeight()/2 - 81,sr.getScaledWidth() / 2 - 207,sr.getScaledHeight()/2 - 82 + 11 * (rectSize),0xff000000);
+                Gui.drawRect(sr.getScaledWidth() / 2 - 91,sr.getScaledHeight()/2 - 81 ,sr.getScaledWidth() / 2 - 90,sr.getScaledHeight()/2 - 82 + 11 * (rectSize),0xff000000);
 
                 float sum = 0;
 
